@@ -1,181 +1,162 @@
 \documentclass[10pt,a4paper,sans]{moderncv}
-
 %% Hack for "File `l3regex.sty' not found."
 \usepackage{expl3}
-\expandafter\def\csname ver@l3regex.sty\endcsname{} 
-
+\expandafter\def\csname ver@l3regex.sty\endcsname{}
 %% ModernCV themes
 \moderncvstyle{classic}
-\moderncvcolor{blue}
+\moderncvcolor{green}
 \renewcommand{\familydefault}{\sfdefault}
 \nopagenumbers{}
-
 %% Character encoding
 \usepackage[utf8]{inputenc}
-
 %% Adjust the page margins
 \usepackage[scale=0.75]{geometry}
-
 % For page numerotation lastpage
 \usepackage{lastpage}
-
-%% Personal data
+%% Personal data - Center
 \firstname{Bendicht}
 \familyname{Grossniklaus}
-\title{Microengineer}
-\address{Rebhalde 11a}{CH-2555 Brügg}
+\title{Embedded Software Engineer}
+%% Personal data - Right
+\born{Born 17 May 1989}
+\address{Prés de l'Envers 2}{CH-2607 Cortébert}
 \mobile{+41 78 654 14 84}
 \email{bendicht.grossniklaus@naxys.ch}
-%\homepage{www.johndoe.com}
-\extrainfo{Born the 17 May 1989\\ Swiss Nationality}
-%\extrainfo{Date of birth: 17.05.1989 \\Swiss Nationality\\ Single}
-%\photo[64pt][0.4pt]{camipro.jpg}
-%\quote{Some quote (optional)}
+\homepage{www.naxys.ch}
+\photo[64pt][0.4pt]{portrait.jpeg}
 
 %%------------------------------------------------------------------------------
 %% Content
 %%------------------------------------------------------------------------------
 \begin{document}
-\setcounter{page}{1}
-\pagenumbering{arabic}
-\rfoot{Bendicht Grossniklaus \hspace{11cm} \thepage\ / \pageref{LastPage}}
-%\footnote{Bendicht Grossniklaus}
-\makecvtitle
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    \rfoot{Bendicht Grossniklaus \hspace{11cm} \thepage\ / \pageref{LastPage}}
+    %\footnote{Bendicht Grossniklaus}
+    \makecvtitle
 
-\section{OBJECTIVE}
-%\cvitem{}{}%Looking for a job
+    \section{PROFESSIONAL PROFILE}
+    Embedded Software Engineer with hands-on experience in electronics, mechatronics and industrial product development.
+    Specialized in embedded C development for microcontroller-based systems, with a focus on real-time motor control, LoRaWAN communication and ultra-low-power applications.
+    Experienced in customer-specific engineering projects, quickly adapting to different development environments, workflows and technical requirements. Bringing experience from diverse customer projects, covering requirements definition, firmware implementation, system integration, troubleshooting, testing and validation.
 
+    \section{WORK EXPERIENCE}
+    \cventry{2021 - Present}{Electronic Development Engineer}{Naxys GmbH}{Prés de l'Envers 2, 2607 Cortébert}{}
+    {
+        Consultant at Sontex SA, contributing to the development and integration of ultra-low-power LoRaWAN communication capabilities into industrial products.
+        \begin{itemize}
+            \item \textbf{Modular LoRaWAN platform development (2021):} Developed a reusable firmware platform in C based on the STM32WLE5CBU6 microcontroller. The dedicated communication controller is integrated into the product PCB and exchanges data with the main product microcontroller, enabling LoRaWAN connectivity across different products while keeping modifications to existing product firmware to a minimum. To achieve ultra-low-power operation, RTC events are managed by the product's main firmware, allowing the LoRaWAN controller to enter a low-power mode with a current consumption of approximately 0.5 $\mu$A until woken up via GPIO.
+            \item \textbf{Plug-on module development (2023):} Developed a plug-on LoRaWAN communication module for an existing Sontex product by creating a dedicated firmware variant of the previously developed platform based on the STM32WLE5CBU6. Since the module manages its own RTC events, it operates in a different low-power configuration with a baseline current consumption of approximately 5 $\mu$A.
+            \item \textbf{Product range extension:} Extended the Sontex product range with LoRaWAN connectivity by configuring the reusable platform and adapting the firmware in C for products based on STM8L052R8 \textbf{(2021-2022)}, STM32L053R8T \textbf{(2024-2025)} and MSP430FR5986IPMR \textbf{(2026)}. Designed and implemented solutions for product-specific requirements while maintaining the low-power constraints of each device.
+            \item \textbf{Specification, testing and validation:} Used Jira and Confluence for technical documentation, specification writing, bug reporting and test case definition. Prepared and executed firmware validation test plans for different products prior to production release.
+        \end{itemize}
+    }
+    \cventry{2020 - 2021}{Control Systems Engineer}{Naxys GmbH}{Prés de l'Envers 2, 2607 Cortébert}{}
+    {
+        Modernized the control system of a customized heating installation serving a multi-family residential building.
+        \begin{itemize}
+            \item Evaluated and selected a suitable PLC based on the interfaces and compatibility requirements of the existing hydraulic system and field devices, including motors, valves and sensors.
+            \item Reimplemented the control software using CODESYS.
+            \item Developed control algorithms for solar thermal heating, wood-fired heating and heat distribution across four residential zones.
+            \item Commissioned and integrated the new control system with the existing heating infrastructure.
+            \item Performed functional testing and validation of the complete system.
+        \end{itemize}
+    }
+    \cventry{2019 - 2020}{Electronic Development Engineer}{Société industrielle de Sonceboz SA}{Rue Rosselet-Challandes 5, 2605 Sonceboz-Sombeval}{}
+    {
+        Worked in the Mechatronics division of the SONCEBOZ GROUP on the development of software for a new family of actuators for hydraulic valves. Responsible for the software and electronics of an actuator driving a Continuously Variable Transmission (CVT) for agricultural engines, collaborating closely with the customer and project manager to bring the actuator from prototype to pre-series stage.
+    }
+    \cventry{2016 - 2019}{Electronic Development Engineer}{Sonceboz Microtechnique Boncourt SA}{Rue des Boulaies 2, CH-2926 Boncourt}{}
+    {
+        Joined the Truck and Offroad division of the SONCEBOZ GROUP following my Master Thesis in Munich. Contributed to bringing CPM products to maturity for series production, leveraging in-depth product knowledge and collaboration with colleagues across Munich, Sonceboz and Boncourt. Supported potential customers and addressed technical challenges throughout product development and production.
+        My responsibilities included:
+        \begin{itemize}
+            \item Embedded software development in C with MISRA compliance on SPC560P44L3 microcontroller, including position control implementation, analog speed throttle integration and issue resolution.
+            \item Introduction of new PCB revisions for CPM products, including coordination and supervision of prototype assembly with the Manufacturing Unit.
+            \item Technical support for customers worldwide.
+            \item Investigation and resolution of product and production issues in collaboration with manufacturing teams.
+        \end{itemize}
+    }
+    \cventry{2015 - 2016}{Student Internship}{Société industrielle de Sonceboz SA}{Rue Rosselet-Challandes 5, 2605 Sonceboz-Sombeval}{}
+    {
+        Investigated the feasibility of estimating BLDC motor coil temperatures through resistance measurements derived from applied voltage and current. Implemented the software and conducted measurement campaigns to evaluate the method, demonstrating its potential for approximate temperature estimation. Documented the results in a laboratory journal as a basis for potential patenting.
+    }
+    \cventry{2014}{Civilian Service}{Ecological Engineering Laboratory (ECOL)}{EPFL, CH-1015 Lausanne}{}
+    {
+        Worked in a team to improve the robustness and add new functionalities to an autonomous motorized catamaran based on a NI computer programmed in LabVIEW. Also participated in data collection campaigns on Lake Geneva, supporting doctoral research projects.
+    }
+    \cventry{2012 - 2013}{Freelance Translator}{SABAG LUZERN AG}{CH-6023 Rothenburg}{}
+    {
+        Translated a tutorial from German into French to introduce employees to a new logistics software program.
+    }
+    \cventry{2008 - 2009}{Civilian Service}{CH-4000 Basel Hörnli, CH-2608 Prés-de-Cortébert, CH-2503 Biel/Bienne}{}{}
+    {
+        Different assignments with a total duration of seven months in landscape gardening, organic farming and traditional dry-stone wall construction.
+    }
 
-\section{WORK EXPERIENCE}
-\cventry{2021 - 2023}{Electronic development Engineer}{Naxys GmbH}{Prés de l'Envers 2, 2607 Cortébert}{}
-{
-%\vspace{.3cm}
-As consultant, I was working at Sontex SA on the Development of a firmware platform for LoRaWAN radio communication. The goal of this platform was to allow to easily add the LoRaWAN radio function to an existing Sontex-product needing a minimum of changes in the product firmware. Therefore most functionality were implemented on a separate microcontroller and implemented in a way to fit the different Sontex-products. The work consisted of writing specifications, implementing firmware, writing test cases and executing tests for validation.
-\vspace{.3cm}
-}
+    \section{EDUCATION}
+    \cventry{2014 - 2016}{Master}{Ecole Polytechnique Fédérale de Lausanne (EPFL)}{CH-1015 Lausanne}{}{Micro-engineering, specialization in Robotics and Autonomous Systems (RSA)}
+    \cventry{2009 - 2014}{Bachelor}{Ecole Polytechnique Fédérale de Lausanne (EPFL)}{CH-1015 Lausanne}{}{Micro-engineering}
+    \cventry{2008}{High school diploma}{Gymnasium Alpenstrasse}{CH-2502 Biel-Bienne}{}{Physics and applied mathematics, bilingual (French-German)}
 
-\cventry{2020-2021}{Collaborator Kayak and Canoe rental}{GLOBEPADDLER Bielersee AG}{Schlossstrasse 24, CH-2560 Nidau}{}
-{
-%\vspace{.3cm}
-In the summer season 2020 , I was active as collaborator in the Kayak rental GLOBEPADDLER Bielersee AG. The main activity fields were: advice customers for boat type or trip possibilities, teaching kayak courses, transport kayak-canoe and rented material with the company's car, minor reparations on the rented material and the rental station.
-\vspace{.3cm}
-}
+    \subsection{PROJECTS}
+    \cventry{2016}{Master Thesis: Design of an external BLDC motor with integrated electronics for 48V on-board power supply}{Sonceboz SA - Integrated Actuators Laboratory (LAI)}{CPM Compact Power Motion GmbH, Feringastraße 11A, 85774 Unterföhring, Deutschland}{}
+    {
+       Conducted a Master Thesis in collaboration between the SONCEBOZ GROUP and LAI-EPFL at Compact Power Motion GmbH (CPM) in Munich, focusing on the design of an external-rotor BLDC motor with twice the power and torque of existing CPM products. Designed and optimized motor geometry using Flux2D FEM simulations, performed thermal analysis in SolidWorks and developed a Software-in-the-Loop model in MATLAB/Simulink. Achieved a design meeting the defined requirements for torque, power and motor control.
+    }
+    \cventry{2015}{Semester Project II: Automation of a laboratory coil winding machine}{Integrated Actuators Laboratory (LAI)}{Rue de la Maladière 71 B, CH-2002 Neuchâtel}{}
+    {
+        Automated a laboratory coil winding machine using an Arduino and a linear stepper motor. Implemented synchronized motor control using encoder feedback and a simple LCD-based user interface.
+    }
+    \cventry{2014-2015}{Semester Project I: Development of a soft jellyfish type underwater robot}{Laboratory of Intelligent Systems (LIS)}{EPFL, CH-1015 Lausanne}{}
+    {
+        Designed and tested a jellyfish-inspired underwater robot using Dielectric Elastomer Actuators (DEAs). Developed MATLAB models and evaluated the prototype's propulsion, deformation and power consumption.
+    }
 
+    \section{TECHNICAL SKILLS}
+    \cvitem{Programming Languages \& Scripting}
+    {
+        \begin{itemize}
+            \item[] C: Expert knowledge, extensive hands-on experience (including MISRA-C)
+            \item[] C++ (Qt Framework), Vector CAPL, MATLAB/Octave: Previous hands-on experience
+            \item[] Python, Rust (new): Basic knowledge
+        \end{itemize}
+        % This version is currently not used
+        %        \begin{itemize}
+        %            \item Expert: C (with MISRA-C)
+        %            \item Advanced:
+        %            \item Basic: VECTOR CAPL, MATLAB/Octave, ASSEMBLER, C++, RUST
+        %        \end{itemize}
+    }
 
-\cventry{2019 - 2020}{Electronic development Engineer}{Société industrielle de Sonceboz SA}{Rue Rosselet-Challandes 5, 2605 Sonceboz-Sombeval}{}
-{
-%\vspace{.1cm}
-In the \textit{Mechatronics} division of the SONCEBOZ GROUP, I worked in a team to implement the software for a new family of actuators for hydraulic valves. As the exclusive electronic engineer of the project team, I was in charge of the software and electronics of an actuator driving a Continously Variable Transmission (CVT) of agriculture engines. In close collaboration with the customer and the project manager, we enhaced the CVT actuator from a prototype to a pre-series status within this year.
-\vspace{.3cm}
-}
+    \cvitem{Microcontrollers}
+    {
+        STM32WLE5CBU6, STM32L053R8T, STM8L052R8, MSP430FR5986IPMR, SPC560P44L3
+    }
+    \smallskip
+    \cvitem{Software Tools}
+    {
+        Eclipse based IDEs (STM32CubeIDE, CCStudio, ...), SpiraTeam, Atlassian Jira/Confluence, Altium Designer, Vector CANalyzer, SolidWorks, MATLAB/SIMULINK, Flux2D/3D, LabVIEW, LaTex, MS Office.
+    }
+    \smallskip
+    \cvitem{Hardware-related Skills}
+    {
+        Basic electronic designs, prototype debugging, soldering, building small test and measurement setups, drilling and milling.
+    }
 
-\cventry{2016 - 2019}{Electronic development Engineer}{Sonceboz Microtechnique Boncourt SA}{Rue des Boulaies 2, CH-2926 Boncourt}{}
-{
-%\vspace{.1cm}
-Following my Master Thesis in Munich, I was mandated as electronic development engineer in the \textit{Truck and Offroad} division of the SONCEBOZ GROUP. Thanks to my knowledge of the CPM products and the good relationship with the colleagues in Munich, Sonceboz and Boncourt, I participated as a linking part to bring the CPM products to maturation for series production and gave support to potential customers. During this time I did software development such as implementation of position control, introduction of an analog speed throttle and resolutions of issues. Further, I introduced new PCB versions for the CPM products, being in charge of organizing and supervising prototype-mounting with the Manufacturing Unit. Finally, I gave technical support to customers around the globe and to colleagues on the production-line (investigating of product and production issues on the line).
-\vspace{.3cm}
-}
+    \section{LANGUAGES}
+    \cvitem{German}{Bilingual (Swiss-German native language)}
+    \cvitem{French}{Bilingual (Obligatory school)}
+    \cvitem{English}{Good knowledge (Level B2)}
+    \cvitem{Spanish}{Good oral understanding}
 
-\cventry{2015-2016}{Student Internship}{Société industrielle de Sonceboz SA}{Rue Rosselet-Challandes 5, 2605 Sonceboz-Sombeval}{}
-{
-%\vspace{.1cm}
-For my end-of-studies internship, I was mandated by the \textit{Truck and Offroad} division of the SONCEBOZ GROUP to investigate the feasibility of measuring the temperature of a BLDC motor using the variation of its coil resistance. Using the applied voltage and the current measurement, the resistance variation of the motor phases could be computed and thereby, the temperature variation estimated. Implementing the software and leading measurement campaigns, I could show that the method allowed a rough estimation of the coil temperatures. At the end of this six-months internship, I wrote a laboratory journal in perspective to a potential patenting of the method.
-\vspace{.3cm}
-}
-
-\cventry{2014}{Civilian Service}{Ecological Engineering Laboratory (ECOL)}{EPFL, CH-1015 Lausanne}{}
-{
-%\vspace{.1cm}
-Working in a team of civilists, we improved the robustness and added new functionalities to an autonomous motorized catamaran based on a NI-Computer programmed in LabVIEW. Further, we helped to collect data for the doctoral candidates on the lake Léman using the catamaran, during the measuring campaigns.
-\vspace{.3cm}
-}
-
-\cventry{2012 - 2013}{Freelance translator}{SABAG LUZERN AG}{CH-6023 Rothenburg}{}
-{
-%\vspace{.1cm}
-As a freelance translator, I did a German to French translation of a tutorial introducing a new logistic program to the employees.
-\vspace{.3cm}
-}
-
-\cventry{2008 - 2009}{Civilian Service}{CH-4000 Basel Hörnli, CH-2608 Prés-de-Cortébert, CH-2503 Biel/Bienne}{}{}
-{
-%\vspace{.1cm}
-Different mandates with a total duration of seven months in the following fields : landscape gardening, work in an organic farm, building dry stone walls
-\vspace{.3cm}
-}
-
-
-\section{EDUCATION}
-\cventry{2014 - 2016}{Master}{Ecole Polytechnique Fédérale de Lausanne (EPFL)}{CH-1015 Lausanne}{}{Micro-engineering, specialization in Robotics and Autonomous Systems (RSA)}  % arguments 3 to 6 can be left empty
-\cventry{2009 - 2014}{Bachelor}{Ecole Polytechnique Fédérale de Lausanne (EPFL)}{CH-1015 Lausanne}{}{Micro-engineering}  % arguments 3 to 6 can be left empty
-\cventry{2008}{High school diploma}{Gymnasium Alpenstrasse}{CH-2502 Biel-Bienne}{}{Physics and applied mathematics, bilingual (French-German)}  % arguments 3 to 6 can be left empty
-
-
-\subsection{PROJECTS}
-%\subsection{Master Diploma Project}
-\cventry{2016}{Master Thesis: Design of an external BLDC motor with integrated electronics for 48V on-board power supply}{Sonceboz SA - Integrated Actuators Laboratory (LAI)}{CPM Compact Power Motion GmbH, Feringastraße 11A, 85774 Unterföhring, Deutschland}{}
-{
-	%\vspace{.05cm}
-	As a collaboration between the SONCEBOZ GROUP and LAI-EPFL, my Master Thesis took place in Munich, where I was immersed in the Spin-Off Compact Power Motion GmbH (CPM). The goal of the work was to design a motor of the same type as the existing products of CPM (BLDC motors with external rotor), but with a two-times higher power and torque. The main topics of the work were the design of the motor geometry and its optimization using 2D FEM simulations (Flux2D), the evaluation of the thermal performance using FEM simulations (SolidWorks) and the implementation of the chosen solution as a model for the Software-In-The-Loop Tool (Matlab/Simulink). The outcome was a solution that fulfilled the defined requirements considering torque, power and control of the motor (driving the model with the SIL). Nevertheless the thermal behavior of the newly-designed motor was worse than the existing CPM products due to the bigger diameter of the inner stator. During the six month of internship, I met many people of the SONCEBOZ GROUP on the three sites Sonceboz (R+D), Boncourt (Production) and Munich (R+D) to get the information I needed to accomplish my Master Thesis.
-	\vspace{.3cm}
-}
-
-%\subsection{Semester projects}
-\cventry{2015}{Semester Project II: Automation of a laboratory coil winding machine}{Integrated Actuators Laboratory (LAI)}{Rue de la Maladière 71 B, CH-2002 Neuchâtel}{}
-{
-	%\vspace{.1cm}
-	The goal of my second semester project was to automatize a semi-automatic coil winding machine used by the LAI for prototyping. I did this using a commercial Arduino-board and a linear stepper motor. The stepper motor is synchronized with the rotary motor using it's encoder signals and an LCD with five push-buttons for user entries.
-	\vspace{.3cm}
-}
-
-\cventry{2014-2015}{Semester Project I: Development of a soft jellyfish type underwater robot}{Laboratory of Intelligent Systems (LIS)}{EPFL, CH-1015 Lausanne}{}
-{
-	%\vspace{.1cm}
-	The goal of my first semester project was to design a jellyfish-like robot using Dielectric Elastomer Actuators (DEAs). In order to find the best design, I did two models in MATLAB, one for the propulsion force and one for the DEA deformation. My design was built in a specialized laboratory by the doctoral student supervising my work. I mad the test on the final prototype measuring the force, the deflection and the power consumption of the actuated jellyfish in water. With this work, we could show that with its high energy density and its fast actuation response, DEA is a promising technology for soft robotics.
-	\vspace{.3cm}
-}
-
-\section{TECHNICAL SKILLS}
-\cvitem{Programming Languages}
-{
-Good knowledge : C with MISRA-C Standard, VECTOR CAPL, MATLAB/Octave scripts
-Basic knowledge : ASSEMBLER, C++
-}
-
-\smallskip
-
-\cvitem{Software Tools}
-{
-CodeWarrior/Code Composer Studio (Eclipse IDE), SpiraTeam, Altium Designer, Vector CANalyzer, SolidWorks (with PDM), MATLAB/SIMULINK, Flux2D/3D and LabVIEW.
-}
-
-\smallskip
-
-\cvitem{Handcraft}
-{
-Solder electronic circuits for prototyping, building small test or measurement setups and traditional manufacture know-how (drilling and milling).
-}
-
-
-
-
-\section{LANGUAGES}
-\cvitem{German}{Bilingual (Swiss German Mother Tongue)}
-\cvitem{French}{Bilingual (Obligatory school)}
-\cvitem{English}{Good knowledge (Level B2)}
-\cvitem{Spanish}{Good oral understanding}
-
-
-
-
-\section{HOBBIES AND INTERESTS}
-\cvitem{Sports}{Swiss junior national team kayak slalom (2003-2007), J+S guide in kayak since 2007, leading a regular training to club youth since 2017 capoeira, kitesurfing, snowboarding and biking}
-
-\smallskip
-
-\cvitem{Handicraft work}{Transformation of a van into a camper, building an exploiting an aquaponic-sytem, permaculture and traditional gardening}
-%\vspace{0.1cm}
-%\cvitem{\textbf{Robopoly}}{Member of the EPFL robotic association, participation in the annual robot contest of the school (2011, 2012, 2014).}
-
-\bibliography{publications}
+    \section{HOBBIES AND INTERESTS}
+    \cvitem{Sports}
+    {
+        \begin{itemize}
+            \item{Capoeira, kitesurfing, biking, snowboarding, cross-country skiing and many more}
+            \item{Swiss junior national team kayak slalom (2003-2007), J+S guide in kayak since 2007, leading a regular training to club youth since 2017-2022}
+         \end{itemize}
+    }
+    \cvitem{Handicraft work}{Transformation of a van into a camper, building and operating an aquaponic system, permaculture and traditional gardening}
 \end{document}
