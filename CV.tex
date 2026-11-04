@@ -20,8 +20,9 @@
 %% Personal data - Right
 \born{Born 17 May 1989}
 \address{Prés de l'Envers 2}{CH-2607 Cortébert}
-\mobile{+41 78 654 14 84}
+\mobile{+41 (0)78 654 14 84}
 \email{bendicht.grossniklaus@naxys.ch}
+\social[linkedin]{bendicht-grossniklaus}
 \homepage{www.naxys.ch}
 \photo[64pt][0.4pt]{portrait.jpeg}
 
@@ -43,7 +44,7 @@
     \section{WORK EXPERIENCE}
     \cventry{2021 - Present}{Electronic Development Engineer}{Naxys GmbH}{Prés de l'Envers 2, 2607 Cortébert}{}
     {
-        Consultant at Sontex SA, contributing to the development and integration of ultra-low-power LoRaWAN communication capabilities into industrial products.
+        Consultant at Sontex SA, contributing to the development and integration of ultra-low-power LoRaWAN communication capabilities into industrial products. Product data is encoded in the M-Bus format and transmitted wirelessly via LoRaWAN.
         \begin{itemize}
             \item \textbf{Modular LoRaWAN platform development (2021):} Developed a reusable firmware platform in C based on the STM32WLE5CBU6 microcontroller. The dedicated communication controller is integrated into the product PCB and exchanges data with the main product microcontroller, enabling LoRaWAN connectivity across different products while keeping modifications to existing product firmware to a minimum. To achieve ultra-low-power operation, RTC events are managed by the product's main firmware, allowing the LoRaWAN controller to enter a low-power mode with a current consumption of approximately 0.5 $\mu$A until woken up via GPIO.
             \item \textbf{Plug-on module development (2023):} Developed a plug-on LoRaWAN communication module for an existing Sontex product by creating a dedicated firmware variant of the previously developed platform based on the STM32WLE5CBU6. Since the module manages its own RTC events, it operates in a different low-power configuration with a baseline current consumption of approximately 5 $\mu$A.
@@ -64,15 +65,14 @@
     }
     \cventry{2019 - 2020}{Electronic Development Engineer}{Société industrielle de Sonceboz SA}{Rue Rosselet-Challandes 5, 2605 Sonceboz-Sombeval}{}
     {
-        Worked in the Mechatronics division of the SONCEBOZ GROUP on the development of software for a new family of actuators for hydraulic valves. Responsible for the software and electronics of an actuator driving a Continuously Variable Transmission (CVT) for agricultural engines, collaborating closely with the customer and project manager to bring the actuator from prototype to pre-series stage.
+        Developed the software and electronics for an actuator driving a Continuously Variable Transmission (CVT) for agricultural engines, as part of a new actuator family for hydraulic valves. Collaborated closely with the customer and project manager to bring the actuator from prototype to pre-series stage.
     }
     \cventry{2016 - 2019}{Electronic Development Engineer}{Sonceboz Microtechnique Boncourt SA}{Rue des Boulaies 2, CH-2926 Boncourt}{}
     {
-        Joined the Truck and Offroad division of the SONCEBOZ GROUP following my Master Thesis in Munich. Contributed to bringing CPM products to maturity for series production, leveraging in-depth product knowledge and collaboration with colleagues across Munich, Sonceboz and Boncourt. Supported potential customers and addressed technical challenges throughout product development and production.
-        My responsibilities included:
+        Contributed to the industrialization of CPM products in the Truck and Offroad division, supporting product development, customer projects and production.
         \begin{itemize}
-            \item Embedded software development in C with MISRA compliance on SPC560P44L3 microcontroller, including position control implementation, analog speed throttle integration and issue resolution.
-            \item Introduction of new PCB revisions for CPM products, including coordination and supervision of prototype assembly with the Manufacturing Unit.
+            \item Embedded software development in MISRA-compliant C on the SPC560P44L3, including position control, analog speed throttle integration and issue resolution.
+            \item Introduction of new PCB revisions and coordination of prototype assembly.
             \item Technical support for customers worldwide.
             \item Investigation and resolution of product and production issues in collaboration with manufacturing teams.
         \end{itemize}
@@ -96,13 +96,9 @@
 
     \section{EDUCATION}
     \cventry{2014 - 2016}{Master}{Ecole Polytechnique Fédérale de Lausanne (EPFL)}{CH-1015 Lausanne}{}{Micro-engineering, specialization in Robotics and Autonomous Systems (RSA)}
-    \cventry{2009 - 2014}{Bachelor}{Ecole Polytechnique Fédérale de Lausanne (EPFL)}{CH-1015 Lausanne}{}{Micro-engineering}
-    \cventry{2008}{High school diploma}{Gymnasium Alpenstrasse}{CH-2502 Biel-Bienne}{}{Physics and applied mathematics, bilingual (French-German)}
-
-    \subsection{PROJECTS}
-    \cventry{2016}{Master Thesis: Design of an external BLDC motor with integrated electronics for 48V on-board power supply}{Sonceboz SA - Integrated Actuators Laboratory (LAI)}{CPM Compact Power Motion GmbH, Feringastraße 11A, 85774 Unterföhring, Deutschland}{}
+    \cventry{2016}{Master Thesis: Design of an external BLDC motor with integrated electronics for 48V on-board power supply}{Sonceboz SA - Integrated Actuators Laboratory (LAI)}{CPM Compact Power Motion GmbH, Feringastraße 11A, 85774 Unterföhring, Germany}{}
     {
-       Conducted a Master Thesis in collaboration between the SONCEBOZ GROUP and LAI-EPFL at Compact Power Motion GmbH (CPM) in Munich, focusing on the design of an external-rotor BLDC motor with twice the power and torque of existing CPM products. Designed and optimized motor geometry using Flux2D FEM simulations, performed thermal analysis in SolidWorks and developed a Software-in-the-Loop model in MATLAB/Simulink. Achieved a design meeting the defined requirements for torque, power and motor control.
+        Conducted a Master Thesis in collaboration between the SONCEBOZ GROUP and LAI-EPFL at Compact Power Motion GmbH (CPM) in Munich, focusing on the design of an external-rotor BLDC motor with twice the power and torque of existing CPM products. Designed and optimized motor geometry using Flux2D FEM simulations, performed thermal analysis in SolidWorks and developed a Software-in-the-Loop model in MATLAB/Simulink. Achieved a design meeting the defined requirements for torque, power and motor control.
     }
     \cventry{2015}{Semester Project II: Automation of a laboratory coil winding machine}{Integrated Actuators Laboratory (LAI)}{Rue de la Maladière 71 B, CH-2002 Neuchâtel}{}
     {
@@ -112,51 +108,60 @@
     {
         Designed and tested a jellyfish-inspired underwater robot using Dielectric Elastomer Actuators (DEAs). Developed MATLAB models and evaluated the prototype's propulsion, deformation and power consumption.
     }
+    \cventry{2009 - 2014}{Bachelor}{Ecole Polytechnique Fédérale de Lausanne (EPFL)}{CH-1015 Lausanne}{}{Micro-engineering}
+    \cventry{2008}{High school diploma}{Gymnasium Alpenstrasse}{CH-2502 Biel-Bienne}{}{Physics and applied mathematics, bilingual (French-German)}
 
-    \section{TECHNICAL SKILLS}
-    \cvitem{Programming Languages \& Scripting}
+     \section{TECHNICAL SKILLS}
+    \cvitem{Programming Languages}
     {
-        \begin{itemize}
-            \item[] C: Expert knowledge, extensive hands-on experience (including MISRA-C)
-            \item[] C++ (Qt Framework), Vector CAPL, MATLAB/Octave: Previous hands-on experience
-            \item[] Python, Rust (new): Basic knowledge
-        \end{itemize}
-        % This version is currently not used
-        %        \begin{itemize}
-        %            \item Expert: C (with MISRA-C)
-        %            \item Advanced:
-        %            \item Basic: VECTOR CAPL, MATLAB/Octave, ASSEMBLER, C++, RUST
-        %        \end{itemize}
+        Core competency: \textbf{C} (extensive hands-on experience, including MISRA-C) \newline
+        Additional experience: Structured Text (IEC 61131-3), Vector CAPL, MATLAB/Octave, C++ (Qt Framework) \newline
+        Basic knowledge: Python, Rust
     }
-
-    \cvitem{Microcontrollers}
+    \cvitem{Embedded Concepts}
     {
-        STM32WLE5CBU6, STM32L053R8T, STM8L052R8, MSP430FR5986IPMR, SPC560P44L3
+        \textbf{Bare-metal programming}, real-time programming, time-triggered scheduling, low-power management, interrupt-driven programming, event-driven state machines, error handling.
     }
-    \smallskip
-    \cvitem{Software Tools}
+%    \cvitem{Software Architecture}
+%    {
+%        Layered architecture, reusable firmware architecture, hardware abstraction, application-layer development.
+%    }
+     \cvitem{Microcontrollers}
+     {
+         MSP430FR5986IPMR, STM32WLE5CBU6, STM32L053R8T, STM8L052R8, SPC560P44L3.
+     }
+     \cvitem{Peripherals}
+     {
+         GPIO, ADC/DAC, PWM, DMA, interrupts, timers, RTC, watchdogs, low-power modes.
+     }
+    \cvitem{Communication}
     {
-        Eclipse based IDEs (STM32CubeIDE, CCStudio, ...), SpiraTeam, Atlassian Jira/Confluence, Altium Designer, Vector CANalyzer, SolidWorks, MATLAB/SIMULINK, Flux2D/3D, LabVIEW, LaTex, MS Office.
+        \textbf{LoRaWAN}, M-Bus, UART, SPI, I²C, CAN, LIN.
     }
-    \smallskip
-    \cvitem{Hardware-related Skills}
-    {
-        Basic electronic designs, prototype debugging, soldering, building small test and measurement setups, drilling and milling.
-    }
+     \cvitem{Debugging \& Measurement}
+     {
+         GDB-based debugging, JTAG/SWD, ST-Link, J-Link, oscilloscope-based debugging and protocol analysis (PicoScope), current consumption measurements (Keysight power analyzer, Nordic Power Profiler II).
+     }
+     \cvitem{Development Tools}
+     {
+         Eclipse-based IDEs (STM32CubeIDE, CCS), Git (TortoiseGit), Atlassian Jira/Confluence, SpiraTeam, Vector CANalyzer, Altium Designer, SolidWorks, MATLAB/Simulink, Flux2D/3D, LabVIEW, LaTeX, MS Office.
+     }
+     \cvitem{Hardware-related Skills}
+     {
+         Basic electronic design, PCB prototype debugging, soldering, building small test and measurement setups, drilling and milling.
+     }
 
     \section{LANGUAGES}
     \cvitem{German}{Bilingual (Swiss-German native language)}
     \cvitem{French}{Bilingual (Obligatory school)}
     \cvitem{English}{Good knowledge (Level B2)}
-    \cvitem{Spanish}{Good oral understanding}
+    \cvitem{Spanish}{Good oral knowledge}
 
     \section{HOBBIES AND INTERESTS}
     \cvitem{Sports}
     {
-        \begin{itemize}
-            \item{Capoeira, kitesurfing, biking, snowboarding, cross-country skiing and many more}
-            \item{Swiss junior national team kayak slalom (2003-2007), J+S guide in kayak since 2007, leading a regular training to club youth since 2017-2022}
-         \end{itemize}
+        Capoeira, kitesurfing, biking, snowboarding, cross-country skiing, kayaking\newline
+        Swiss junior national team kayak slalom (2003-2007), J+S guide in kayak (2007)
     }
     \cvitem{Handicraft work}{Transformation of a van into a camper, building and operating an aquaponic system, permaculture and traditional gardening}
 \end{document}
